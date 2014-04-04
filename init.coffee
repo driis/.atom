@@ -12,6 +12,12 @@ atom.workspaceView.command 'my:cut-line', ->
   editor.selectLine()
   editor.cutSelectedText()
 
+atom.workspaceView.command 'my:stacktrace-transform', ->
+  editor = atom.workspaceView.getActiveView().getEditor()
+  text = editor.getText()
+  text = text.split(/0x[0-9a-f]+/)
+  editor.setText(text.join("\n"))
+
 # Open markdown files soft-wrapped.
 atom.workspaceView.eachEditorView (editorView) ->
   editor = editorView.getEditor()
