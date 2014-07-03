@@ -17,4 +17,4 @@
 #   'ctrl-p': 'core:move-down'
 #
 '.editor':
-  'cmd-X': 'my:cut-line'
+  'cmd-x': 'my:cut-line'

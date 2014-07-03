@@ -1,0 +1,32 @@
+{
+  "name": "language-fsharp",
+  "version": "0.8.4",
+  "private": true,
+  "description": "F# language support for Atom",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbtule/language-fsharp"
+  },
+  "keywords": [
+    "F#",
+    "fsharp",
+    ".Net"
+  ],
+  "license": "BSD",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "readme": "# language-fsharp package\n\nAdds syntax highlighting to F# files in Atom.\n\nOriginally [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle)\nfrom the [F# TextMate bundle](https://code.google.com/p/fsharp-tmbundle/) by @kullbom.\n\nContributions are greatly appreciated. Please fork this repository and open a\npull request to add snippets, make grammar tweaks, etc.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/jbtule/language-fsharp/issues"
+  },
+  "homepage": "https://github.com/jbtule/language-fsharp",
+  "_id": "language-fsharp@0.8.4",
+  "dist": {
+    "shasum": "651cbf4bf4e660a8ef0a702dbc0b9c1c75ca0425"
+  },
+  "_resolved": "/var/folders/jh/fg9kfy2j6jqgggdb91l0t5jr38z5g2/T/d-11463-41165-16tyq9q/package.tgz",
+  "_from": "/var/folders/jh/fg9kfy2j6jqgggdb91l0t5jr38z5g2/T/d-11463-41165-16tyq9q/package.tgz"
+}

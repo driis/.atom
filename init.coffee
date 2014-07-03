@@ -9,7 +9,9 @@ path = require 'path'
 # Add cut-line command
 atom.workspaceView.command 'my:cut-line', ->
   editor = atom.workspaceView.getActiveView().getEditor()
-  editor.selectLine()
+  if editor.getSelectedText().length == 0
+    editor.selectLine()
+  
   editor.cutSelectedText()
 
 atom.workspaceView.command 'my:stacktrace-transform', ->
