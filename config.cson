@@ -2,6 +2,9 @@
   'userId': 'aa6f63c8-7204-8abc-0da8-dfac5ec11347'
 'release-notes':
   'viewedVersion': '0.95.0'
+'runner':
+  'extensions':
+    'csx': 'scriptcs'
 'welcome':
   'showOnStartup': false
 'metrics':
