@@ -11,6 +11,7 @@
   'userId': '2e5edb6201f54e99d6d61e8b91fb3120c04ea558'
 'editor':
   'fontSize': 14
+  'invisibles': {}
 'core':
   'themes': [
     'atom-dark-ui'

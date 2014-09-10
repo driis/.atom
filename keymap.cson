@@ -18,3 +18,8 @@
 #
 '.editor':
   'cmd-x': 'my:cut-line'
+  'cmd-d': 'editor:duplicate-line'
+
+'.platform-win32 .editor, .platform-linux .editor':
+  'ctrl-d': 'editor:duplicate-lines'
+  'ctrl-x': 'my:cut-line'
