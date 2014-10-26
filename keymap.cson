@@ -19,6 +19,7 @@
 '.editor':
   'cmd-x': 'my:cut-line'
   'cmd-d': 'editor:duplicate-line'
+  'cmd-ctrl-t': 'my:stacktrace-transform'
 
 '.platform-win32 .editor, .platform-linux .editor':
   'ctrl-d': 'editor:duplicate-lines'
