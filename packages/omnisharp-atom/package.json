@@ -1,0 +1,1209 @@
+{
+  "name": "omnisharp-atom",
+  "main": "./lib/omnisharp-atom/omnisharp-atom",
+  "version": "0.1.6",
+  "description": "Brings the wonderful omnisharp server to powercharge atom's C# development experience",
+  "activationEvents": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OmniSharp/omnisharp-atom"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "ansi-to-html": "~0.1.0",
+    "request-promise": "~0.1.2",
+    "bluebird": "~2.3.2",
+    "event-kit": "0.7.2",
+    "fs-plus": "^2.3.1",
+    "vue": "~0.10.6",
+    "underscore": "~1.7.0",
+    "autocomplete-plus-async-plus": "latest",
+    "jquery": "^2.1.1",
+    "omnisharp-server-binaries": "latest"
+  },
+  "devDependencies": {
+    "coffeelint": "^1.6.0",
+    "grunt": "^0.4.5",
+    "grunt-coffeelint": "0.0.13",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "readme": "# omnisharp-atom package\n###(The hackable IDE)\n\n![omnisharp-atom](https://github.com/Omnisharp/omnisharp-atom/raw/master/omnisharp-atom.gif)\n\n## Installation\n\nFrom the packages settings inside Atom:\n\n* install \"Language C#\" package\n* install \"Autocomplete plus async\" package first!\n* install \"Omnisharp Atom\" package\n\nFrom the commandline:\n\n```\napm install language-csharp\napm install autocomplete-plus-async\napm install omnisharp-atom\n```\n\n## To use\n\n- Open the root of your solution within Atom\n- Press Ctrl-Alt-o - this starts the OmniSharp server\n\nWhen the flame icon in the bottom left corner turns green, the server has started!\n\n# Features\n\n- `ctrl-F12` Go to definition\n- `shift-F12` Find usages\n- Completions appear as you type. To select an item, press the TAB key.\n- Editor addornments (squigglies) appear for errors and code hints as you type.\n- Enjoy!\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/OmniSharp/omnisharp-atom/issues"
+  },
+  "homepage": "https://github.com/OmniSharp/omnisharp-atom",
+  "_id": "omnisharp-atom@0.1.6",
+  "dist": {
+    "shasum": "a0cd8beb427792fc9c7b652afeb2d5cbe12094e8"
+  },
+  "_resolved": "/private/var/folders/jh/fg9kfy2j6jqgggdb91l0t5jr38z5g2/T/d-1141012-6600-8p8n54/package.tgz",
+  "_from": "/private/var/folders/jh/fg9kfy2j6jqgggdb91l0t5jr38z5g2/T/d-1141012-6600-8p8n54/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "ansi-to-html",
+        "version": "0.1.1",
+        "path": "node_modules/ansi-to-html/lib/ansi_to_html.js"
+      },
+      {
+        "name": "autocomplete-plus-async-plus",
+        "version": "0.22.1",
+        "path": "node_modules/ansi-to-html/lib/ansi_to_html.js"
+      },
+      {
+        "name": "fuzzaldrin",
+        "version": "1.0.0",
+        "path": "node_modules/autocomplete-plus-async-plus/node_modules/fuzzaldrin/lib/fuzzaldrin.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "0.2.14",
+        "path": "node_modules/autocomplete-plus-async-plus/node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "lru-cache",
+        "version": "2.5.0",
+        "path": "node_modules/autocomplete-plus-async-plus/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js"
+      },
+      {
+        "name": "sigmund",
+        "version": "1.0.0",
+        "path": "node_modules/autocomplete-plus-async-plus/node_modules/minimatch/node_modules/sigmund/sigmund.js"
+      },
+      {
+        "name": "temp",
+        "version": "0.8.1",
+        "path": "node_modules/autocomplete-plus-async-plus/node_modules/temp/lib/temp.js"
+      },
+      {
+        "name": "rimraf",
+        "version": "2.2.8",
+        "path": "node_modules/autocomplete-plus-async-plus/node_modules/temp/node_modules/rimraf/rimraf.js"
+      },
+      {
+        "name": "underscore-plus",
+        "version": "1.6.1",
+        "path": "node_modules/autocomplete-plus-async-plus/node_modules/underscore-plus/lib/underscore-plus.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.6.0",
+        "path": "node_modules/autocomplete-plus-async-plus/node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      },
+      {
+        "name": "bluebird",
+        "version": "2.3.11",
+        "path": "node_modules/bluebird/js/main/bluebird.js"
+      },
+      {
+        "name": "event-kit",
+        "version": "0.7.2",
+        "path": "node_modules/event-kit/lib/event-kit.js"
+      },
+      {
+        "name": "grim",
+        "version": "0.12.0",
+        "path": "node_modules/event-kit/node_modules/grim/lib/grim.js"
+      },
+      {
+        "name": "emissary",
+        "version": "1.3.1",
+        "path": "node_modules/event-kit/node_modules/grim/node_modules/emissary/lib/emissary.js"
+      },
+      {
+        "name": "harmony-collections",
+        "version": "0.3.7",
+        "path": "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/harmony-collections/harmony-collections.js"
+      },
+      {
+        "name": "mixto",
+        "version": "1.0.0",
+        "path": "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/mixto/lib/mixin.js"
+      },
+      {
+        "name": "property-accessors",
+        "version": "1.1.0",
+        "path": "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/property-accessors/lib/property-accessors.js"
+      },
+      {
+        "name": "harmony-collections",
+        "version": "0.3.7",
+        "path": "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/property-accessors/node_modules/harmony-collections/harmony-collections.js"
+      },
+      {
+        "name": "underscore-plus",
+        "version": "1.6.1",
+        "path": "node_modules/event-kit/node_modules/grim/node_modules/underscore-plus/lib/underscore-plus.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.6.0",
+        "path": "node_modules/event-kit/node_modules/grim/node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      },
+      {
+        "name": "fs-plus",
+        "version": "2.3.1",
+        "path": "node_modules/fs-plus/lib/fs-plus.js"
+      },
+      {
+        "name": "async",
+        "version": "0.2.10",
+        "path": "node_modules/fs-plus/node_modules/async/lib/async.js"
+      },
+      {
+        "name": "mkdirp",
+        "version": "0.3.5",
+        "path": "node_modules/fs-plus/node_modules/mkdirp/index.js"
+      },
+      {
+        "name": "rimraf",
+        "version": "2.2.8",
+        "path": "node_modules/fs-plus/node_modules/rimraf/rimraf.js"
+      },
+      {
+        "name": "underscore-plus",
+        "version": "1.6.1",
+        "path": "node_modules/fs-plus/node_modules/underscore-plus/lib/underscore-plus.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.6.0",
+        "path": "node_modules/fs-plus/node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      },
+      {
+        "name": "jquery",
+        "version": "2.1.1",
+        "path": "node_modules/jquery/dist/jquery.js"
+      },
+      {
+        "name": "omnisharp-server-binaries",
+        "version": "0.1.9",
+        "path": "node_modules/omnisharp-server-binaries/lib/omni-binaries.js"
+      },
+      {
+        "name": "request-promise",
+        "version": "0.1.4",
+        "path": "node_modules/request-promise/lib/rp.js"
+      },
+      {
+        "name": "bluebird",
+        "version": "1.2.4",
+        "path": "node_modules/request-promise/node_modules/bluebird/js/main/bluebird.js"
+      },
+      {
+        "name": "request",
+        "version": "2.48.0",
+        "path": "node_modules/request-promise/node_modules/request/index.js"
+      },
+      {
+        "name": "aws-sign2",
+        "version": "0.5.0",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/aws-sign2/index.js"
+      },
+      {
+        "name": "bl",
+        "version": "0.9.3",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/bl/bl.js"
+      },
+      {
+        "name": "readable-stream",
+        "version": "1.0.33",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/readable.js"
+      },
+      {
+        "name": "core-util-is",
+        "version": "1.0.1",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/lib/util.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "isarray",
+        "version": "0.0.1",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/index.js"
+      },
+      {
+        "name": "string_decoder",
+        "version": "0.10.31",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/string_decoder/index.js"
+      },
+      {
+        "name": "caseless",
+        "version": "0.7.0",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/caseless/index.js"
+      },
+      {
+        "name": "combined-stream",
+        "version": "0.0.7",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/combined-stream/lib/combined_stream.js"
+      },
+      {
+        "name": "delayed-stream",
+        "version": "0.0.5",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/lib/delayed_stream.js"
+      },
+      {
+        "name": "forever-agent",
+        "version": "0.5.2",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/forever-agent/index.js"
+      },
+      {
+        "name": "form-data",
+        "version": "0.1.4",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/form-data/lib/form_data.js"
+      },
+      {
+        "name": "async",
+        "version": "0.9.0",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js"
+      },
+      {
+        "name": "mime",
+        "version": "1.2.11",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/form-data/node_modules/mime/mime.js"
+      },
+      {
+        "name": "hawk",
+        "version": "1.1.1",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/hawk/index.js"
+      },
+      {
+        "name": "boom",
+        "version": "0.4.2",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/boom/index.js"
+      },
+      {
+        "name": "cryptiles",
+        "version": "0.2.2",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/cryptiles/index.js"
+      },
+      {
+        "name": "hoek",
+        "version": "0.9.1",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/hoek/index.js"
+      },
+      {
+        "name": "sntp",
+        "version": "0.2.4",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/sntp/index.js"
+      },
+      {
+        "name": "http-signature",
+        "version": "0.10.0",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/http-signature/lib/index.js"
+      },
+      {
+        "name": "asn1",
+        "version": "0.1.11",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/index.js"
+      },
+      {
+        "name": "assert-plus",
+        "version": "0.1.2",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/assert-plus/assert.js"
+      },
+      {
+        "name": "ctype",
+        "version": "0.5.2",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/ctype.js"
+      },
+      {
+        "name": "json-stringify-safe",
+        "version": "5.0.0",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/json-stringify-safe/stringify.js"
+      },
+      {
+        "name": "mime-types",
+        "version": "1.0.2",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/mime-types/lib/index.js"
+      },
+      {
+        "name": "node-uuid",
+        "version": "1.4.1",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/node-uuid/uuid.js"
+      },
+      {
+        "name": "oauth-sign",
+        "version": "0.5.0",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/oauth-sign/index.js"
+      },
+      {
+        "name": "qs",
+        "version": "2.3.2",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/qs/index.js"
+      },
+      {
+        "name": "stringstream",
+        "version": "0.0.4",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/stringstream/stringstream.js"
+      },
+      {
+        "name": "tough-cookie",
+        "version": "0.12.1",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/tough-cookie/lib/cookie.js"
+      },
+      {
+        "name": "punycode",
+        "version": "1.3.2",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/tough-cookie/node_modules/punycode/punycode.js"
+      },
+      {
+        "name": "tunnel-agent",
+        "version": "0.4.0",
+        "path": "node_modules/request-promise/node_modules/request/node_modules/tunnel-agent/index.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.7.0",
+        "path": "node_modules/underscore/underscore.js"
+      },
+      {
+        "name": "vue",
+        "version": "0.10.6",
+        "path": "node_modules/vue/src/main.js"
+      }
+    ],
+    "extensions": {
+      ".coffee": [
+        "Gruntfile.coffee",
+        "lib/omni-sharp-server/omni-sharp-server.coffee",
+        "lib/omni-sharp-server/omni.coffee",
+        "lib/omnisharp-atom/features/completion.coffee",
+        "lib/omnisharp-atom/features/error-handler.coffee",
+        "lib/omnisharp-atom/features/find-usages.coffee",
+        "lib/omnisharp-atom/features/go-to-definition.coffee",
+        "lib/omnisharp-atom/features/lib/completion-provider.coffee",
+        "lib/omnisharp-atom/features/syntax-errors.coffee",
+        "lib/omnisharp-atom/omnisharp-atom.coffee",
+        "lib/omnisharp-atom/views/dock-view.coffee",
+        "lib/omnisharp-atom/views/error-pane-view.coffee",
+        "lib/omnisharp-atom/views/find-pane-view.coffee",
+        "lib/omnisharp-atom/views/omni-output-pane-view.coffee",
+        "lib/omnisharp-atom/views/status-bar-view.coffee",
+        "node_modules/autocomplete-plus-async-plus/lib/autocomplete-view.coffee",
+        "node_modules/autocomplete-plus-async-plus/lib/autocomplete.coffee",
+        "node_modules/autocomplete-plus-async-plus/lib/fuzzy-provider.coffee",
+        "node_modules/autocomplete-plus-async-plus/lib/perf.coffee",
+        "node_modules/autocomplete-plus-async-plus/lib/provider.coffee",
+        "node_modules/autocomplete-plus-async-plus/lib/simple-select-list-view.coffee",
+        "node_modules/autocomplete-plus-async-plus/lib/suggestion.coffee",
+        "node_modules/autocomplete-plus-async-plus/lib/utils.coffee"
+      ],
+      ".js": [
+        "node_modules/ansi-to-html/grunt.js",
+        "node_modules/ansi-to-html/lib/ansi_to_html.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/fuzzaldrin/lib/filter.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/fuzzaldrin/lib/fuzzaldrin.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/fuzzaldrin/vendor/stringscore.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/minimatch/minimatch.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/minimatch/node_modules/sigmund/bench.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/minimatch/node_modules/sigmund/sigmund.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/temp/examples/grepcount.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/temp/examples/pdfcreator.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/temp/lib/temp.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/temp/no_cleanup.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/temp/no_cleanup_on_exit.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/temp/no_cleanup_on_exit.spec.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/temp/node_modules/rimraf/bin.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/temp/node_modules/rimraf/rimraf.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/underscore-plus/lib/underscore-plus.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/underscore-plus/node_modules/underscore/underscore-min.js",
+        "node_modules/autocomplete-plus-async-plus/node_modules/underscore-plus/node_modules/underscore/underscore.js",
+        "node_modules/bluebird/js/browser/bluebird.js",
+        "node_modules/bluebird/js/main/any.js",
+        "node_modules/bluebird/js/main/assert.js",
+        "node_modules/bluebird/js/main/async.js",
+        "node_modules/bluebird/js/main/bluebird.js",
+        "node_modules/bluebird/js/main/call_get.js",
+        "node_modules/bluebird/js/main/cancel.js",
+        "node_modules/bluebird/js/main/captured_trace.js",
+        "node_modules/bluebird/js/main/catch_filter.js",
+        "node_modules/bluebird/js/main/direct_resolve.js",
+        "node_modules/bluebird/js/main/each.js",
+        "node_modules/bluebird/js/main/errors.js",
+        "node_modules/bluebird/js/main/errors_api_rejection.js",
+        "node_modules/bluebird/js/main/es5.js",
+        "node_modules/bluebird/js/main/filter.js",
+        "node_modules/bluebird/js/main/finally.js",
+        "node_modules/bluebird/js/main/generators.js",
+        "node_modules/bluebird/js/main/join.js",
+        "node_modules/bluebird/js/main/map.js",
+        "node_modules/bluebird/js/main/nodeify.js",
+        "node_modules/bluebird/js/main/progress.js",
+        "node_modules/bluebird/js/main/promise.js",
+        "node_modules/bluebird/js/main/promise_array.js",
+        "node_modules/bluebird/js/main/promise_resolver.js",
+        "node_modules/bluebird/js/main/promisify.js",
+        "node_modules/bluebird/js/main/props.js",
+        "node_modules/bluebird/js/main/queue.js",
+        "node_modules/bluebird/js/main/race.js",
+        "node_modules/bluebird/js/main/reduce.js",
+        "node_modules/bluebird/js/main/schedule.js",
+        "node_modules/bluebird/js/main/settle.js",
+        "node_modules/bluebird/js/main/some.js",
+        "node_modules/bluebird/js/main/synchronous_inspection.js",
+        "node_modules/bluebird/js/main/thenables.js",
+        "node_modules/bluebird/js/main/timers.js",
+        "node_modules/bluebird/js/main/using.js",
+        "node_modules/bluebird/js/main/util.js",
+        "node_modules/bluebird/js/zalgo/any.js",
+        "node_modules/bluebird/js/zalgo/assert.js",
+        "node_modules/bluebird/js/zalgo/async.js",
+        "node_modules/bluebird/js/zalgo/bluebird.js",
+        "node_modules/bluebird/js/zalgo/call_get.js",
+        "node_modules/bluebird/js/zalgo/cancel.js",
+        "node_modules/bluebird/js/zalgo/captured_trace.js",
+        "node_modules/bluebird/js/zalgo/catch_filter.js",
+        "node_modules/bluebird/js/zalgo/direct_resolve.js",
+        "node_modules/bluebird/js/zalgo/each.js",
+        "node_modules/bluebird/js/zalgo/errors.js",
+        "node_modules/bluebird/js/zalgo/errors_api_rejection.js",
+        "node_modules/bluebird/js/zalgo/es5.js",
+        "node_modules/bluebird/js/zalgo/filter.js",
+        "node_modules/bluebird/js/zalgo/finally.js",
+        "node_modules/bluebird/js/zalgo/generators.js",
+        "node_modules/bluebird/js/zalgo/join.js",
+        "node_modules/bluebird/js/zalgo/map.js",
+        "node_modules/bluebird/js/zalgo/nodeify.js",
+        "node_modules/bluebird/js/zalgo/progress.js",
+        "node_modules/bluebird/js/zalgo/promise.js",
+        "node_modules/bluebird/js/zalgo/promise_array.js",
+        "node_modules/bluebird/js/zalgo/promise_resolver.js",
+        "node_modules/bluebird/js/zalgo/promisify.js",
+        "node_modules/bluebird/js/zalgo/props.js",
+        "node_modules/bluebird/js/zalgo/queue.js",
+        "node_modules/bluebird/js/zalgo/race.js",
+        "node_modules/bluebird/js/zalgo/reduce.js",
+        "node_modules/bluebird/js/zalgo/schedule.js",
+        "node_modules/bluebird/js/zalgo/settle.js",
+        "node_modules/bluebird/js/zalgo/some.js",
+        "node_modules/bluebird/js/zalgo/synchronous_inspection.js",
+        "node_modules/bluebird/js/zalgo/thenables.js",
+        "node_modules/bluebird/js/zalgo/timers.js",
+        "node_modules/bluebird/js/zalgo/using.js",
+        "node_modules/bluebird/js/zalgo/util.js",
+        "node_modules/event-kit/lib/composite-disposable.js",
+        "node_modules/event-kit/lib/disposable.js",
+        "node_modules/event-kit/lib/emitter.js",
+        "node_modules/event-kit/lib/event-kit.js",
+        "node_modules/event-kit/node_modules/grim/lib/deprecation.js",
+        "node_modules/event-kit/node_modules/grim/lib/grim.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/lib/behavior.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/lib/emissary.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/lib/emitter.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/lib/helpers.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/lib/signal.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/lib/subscriber.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/lib/subscription.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/harmony-collections/harmony-collections.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/harmony-collections/harmony-collections.min.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/mixto/lib/mixin.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/property-accessors/lib/property-accessors.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/property-accessors/node_modules/harmony-collections/harmony-collections.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/property-accessors/node_modules/harmony-collections/harmony-collections.min.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/underscore-plus/lib/underscore-plus.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/underscore-plus/node_modules/underscore/underscore-min.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/underscore-plus/node_modules/underscore/underscore.js",
+        "node_modules/fs-plus/lib/fs-plus.js",
+        "node_modules/fs-plus/node_modules/async/lib/async.js",
+        "node_modules/fs-plus/node_modules/mkdirp/examples/pow.js",
+        "node_modules/fs-plus/node_modules/mkdirp/index.js",
+        "node_modules/fs-plus/node_modules/rimraf/bin.js",
+        "node_modules/fs-plus/node_modules/rimraf/rimraf.js",
+        "node_modules/fs-plus/node_modules/underscore-plus/lib/underscore-plus.js",
+        "node_modules/fs-plus/node_modules/underscore-plus/node_modules/underscore/underscore-min.js",
+        "node_modules/fs-plus/node_modules/underscore-plus/node_modules/underscore/underscore.js",
+        "node_modules/jquery/dist/cdn/jquery-2.1.1.js",
+        "node_modules/jquery/dist/cdn/jquery-2.1.1.min.js",
+        "node_modules/jquery/dist/jquery.js",
+        "node_modules/jquery/dist/jquery.min.js",
+        "node_modules/jquery/src/ajax/jsonp.js",
+        "node_modules/jquery/src/ajax/load.js",
+        "node_modules/jquery/src/ajax/parseJSON.js",
+        "node_modules/jquery/src/ajax/parseXML.js",
+        "node_modules/jquery/src/ajax/script.js",
+        "node_modules/jquery/src/ajax/var/nonce.js",
+        "node_modules/jquery/src/ajax/var/rquery.js",
+        "node_modules/jquery/src/ajax/xhr.js",
+        "node_modules/jquery/src/ajax.js",
+        "node_modules/jquery/src/attributes/attr.js",
+        "node_modules/jquery/src/attributes/classes.js",
+        "node_modules/jquery/src/attributes/prop.js",
+        "node_modules/jquery/src/attributes/support.js",
+        "node_modules/jquery/src/attributes/val.js",
+        "node_modules/jquery/src/attributes.js",
+        "node_modules/jquery/src/callbacks.js",
+        "node_modules/jquery/src/core/access.js",
+        "node_modules/jquery/src/core/init.js",
+        "node_modules/jquery/src/core/parseHTML.js",
+        "node_modules/jquery/src/core/ready.js",
+        "node_modules/jquery/src/core/var/rsingleTag.js",
+        "node_modules/jquery/src/core.js",
+        "node_modules/jquery/src/css/addGetHookIf.js",
+        "node_modules/jquery/src/css/curCSS.js",
+        "node_modules/jquery/src/css/defaultDisplay.js",
+        "node_modules/jquery/src/css/hiddenVisibleSelectors.js",
+        "node_modules/jquery/src/css/support.js",
+        "node_modules/jquery/src/css/swap.js",
+        "node_modules/jquery/src/css/var/cssExpand.js",
+        "node_modules/jquery/src/css/var/getStyles.js",
+        "node_modules/jquery/src/css/var/isHidden.js",
+        "node_modules/jquery/src/css/var/rmargin.js",
+        "node_modules/jquery/src/css/var/rnumnonpx.js",
+        "node_modules/jquery/src/css.js",
+        "node_modules/jquery/src/data/Data.js",
+        "node_modules/jquery/src/data/accepts.js",
+        "node_modules/jquery/src/data/var/data_priv.js",
+        "node_modules/jquery/src/data/var/data_user.js",
+        "node_modules/jquery/src/data.js",
+        "node_modules/jquery/src/deferred.js",
+        "node_modules/jquery/src/deprecated.js",
+        "node_modules/jquery/src/dimensions.js",
+        "node_modules/jquery/src/effects/Tween.js",
+        "node_modules/jquery/src/effects/animatedSelector.js",
+        "node_modules/jquery/src/effects.js",
+        "node_modules/jquery/src/event/alias.js",
+        "node_modules/jquery/src/event/support.js",
+        "node_modules/jquery/src/event.js",
+        "node_modules/jquery/src/exports/amd.js",
+        "node_modules/jquery/src/exports/global.js",
+        "node_modules/jquery/src/intro.js",
+        "node_modules/jquery/src/jquery.js",
+        "node_modules/jquery/src/manipulation/_evalUrl.js",
+        "node_modules/jquery/src/manipulation/support.js",
+        "node_modules/jquery/src/manipulation/var/rcheckableType.js",
+        "node_modules/jquery/src/manipulation.js",
+        "node_modules/jquery/src/offset.js",
+        "node_modules/jquery/src/outro.js",
+        "node_modules/jquery/src/queue/delay.js",
+        "node_modules/jquery/src/queue.js",
+        "node_modules/jquery/src/selector-native.js",
+        "node_modules/jquery/src/selector-sizzle.js",
+        "node_modules/jquery/src/selector.js",
+        "node_modules/jquery/src/serialize.js",
+        "node_modules/jquery/src/sizzle/dist/sizzle.js",
+        "node_modules/jquery/src/sizzle/dist/sizzle.min.js",
+        "node_modules/jquery/src/traversing/findFilter.js",
+        "node_modules/jquery/src/traversing/var/rneedsContext.js",
+        "node_modules/jquery/src/traversing.js",
+        "node_modules/jquery/src/var/arr.js",
+        "node_modules/jquery/src/var/class2type.js",
+        "node_modules/jquery/src/var/concat.js",
+        "node_modules/jquery/src/var/hasOwn.js",
+        "node_modules/jquery/src/var/indexOf.js",
+        "node_modules/jquery/src/var/pnum.js",
+        "node_modules/jquery/src/var/push.js",
+        "node_modules/jquery/src/var/rnotwhite.js",
+        "node_modules/jquery/src/var/slice.js",
+        "node_modules/jquery/src/var/strundefined.js",
+        "node_modules/jquery/src/var/support.js",
+        "node_modules/jquery/src/var/toString.js",
+        "node_modules/jquery/src/wrap.js",
+        "node_modules/omnisharp-server-binaries/index.js",
+        "node_modules/omnisharp-server-binaries/lib/omni-binaries.js",
+        "node_modules/request-promise/lib/rp.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/any.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/assert.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/async.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/bluebird.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/call_get.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/cancel.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/captured_trace.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/catch_filter.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/direct_resolve.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/errors.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/errors_api_rejection.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/es5.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/filter.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/finally.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/generators.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/global.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/map.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/nodeify.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/progress.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/promise.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/promise_array.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/promise_resolver.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/promise_spawn.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/promisify.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/properties_promise_array.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/props.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/queue.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/race.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/reduce.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/schedule.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/settle.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/settled_promise_array.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/some.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/some_promise_array.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/synchronous_inspection.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/thenables.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/timers.js",
+        "node_modules/request-promise/node_modules/bluebird/js/main/util.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/any.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/assert.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/async.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/bluebird.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/call_get.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/cancel.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/captured_trace.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/catch_filter.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/direct_resolve.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/errors.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/errors_api_rejection.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/es5.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/filter.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/finally.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/generators.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/global.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/map.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/nodeify.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/progress.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/promise.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/promise_array.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/promise_resolver.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/promise_spawn.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/promisify.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/properties_promise_array.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/props.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/queue.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/race.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/reduce.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/schedule.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/settle.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/settled_promise_array.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/some.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/some_promise_array.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/synchronous_inspection.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/thenables.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/timers.js",
+        "node_modules/request-promise/node_modules/bluebird/js/zalgo/util.js",
+        "node_modules/request-promise/node_modules/bluebird/zalgo.js",
+        "node_modules/request-promise/node_modules/request/index.js",
+        "node_modules/request-promise/node_modules/request/lib/cookies.js",
+        "node_modules/request-promise/node_modules/request/lib/copy.js",
+        "node_modules/request-promise/node_modules/request/lib/debug.js",
+        "node_modules/request-promise/node_modules/request/lib/helpers.js",
+        "node_modules/request-promise/node_modules/request/node_modules/aws-sign2/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/bl.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/duplex.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_duplex.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_passthrough.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_readable.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_transform.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_writable.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/lib/util.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/util.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/inherits.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/inherits_browser.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/test.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/build/build.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/string_decoder/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/passthrough.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/readable.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/transform.js",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/writable.js",
+        "node_modules/request-promise/node_modules/request/node_modules/caseless/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/caseless/test.js",
+        "node_modules/request-promise/node_modules/request/node_modules/combined-stream/lib/combined_stream.js",
+        "node_modules/request-promise/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/lib/delayed_stream.js",
+        "node_modules/request-promise/node_modules/request/node_modules/forever-agent/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/form-data/lib/form_data.js",
+        "node_modules/request-promise/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js",
+        "node_modules/request-promise/node_modules/request/node_modules/form-data/node_modules/mime/mime.js",
+        "node_modules/request-promise/node_modules/request/node_modules/form-data/node_modules/mime/test.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/example/usage.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/lib/browser.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/lib/client.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/lib/crypto.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/lib/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/lib/server.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/lib/utils.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/boom/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/cryptiles/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/hoek/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/hoek/lib/escape.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/hoek/lib/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/sntp/examples/offset.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/sntp/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/lib/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/lib/parser.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/lib/signer.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/lib/util.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/lib/verify.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/errors.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/reader.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/types.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/writer.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/asn1/tst/ber/reader.test.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/asn1/tst/ber/writer.test.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/assert-plus/assert.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/ctf.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/ctio.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/ctype.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/tst.fail.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/tst.float.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/tst.int.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/tst.psinfo.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/tst.struct.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/tst.typedef.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/float/tst.rfloat.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/float/tst.wfloat.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/int/tst.64.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/int/tst.rint.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/int/tst.wbounds.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/int/tst.wint.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/uint/tst.64.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/uint/tst.roundtrip.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/uint/tst.ruint.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/uint/tst.wuint.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.basicr.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.basicw.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.char.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.endian.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.oldwrite.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.readSize.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.structw.js",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.writeStruct.js",
+        "node_modules/request-promise/node_modules/request/node_modules/json-stringify-safe/stringify.js",
+        "node_modules/request-promise/node_modules/request/node_modules/json-stringify-safe/test.js",
+        "node_modules/request-promise/node_modules/request/node_modules/mime-types/lib/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/node-uuid/benchmark/benchmark.js",
+        "node_modules/request-promise/node_modules/request/node_modules/node-uuid/uuid.js",
+        "node_modules/request-promise/node_modules/request/node_modules/oauth-sign/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/oauth-sign/test.js",
+        "node_modules/request-promise/node_modules/request/node_modules/qs/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/qs/lib/index.js",
+        "node_modules/request-promise/node_modules/request/node_modules/qs/lib/parse.js",
+        "node_modules/request-promise/node_modules/request/node_modules/qs/lib/stringify.js",
+        "node_modules/request-promise/node_modules/request/node_modules/qs/lib/utils.js",
+        "node_modules/request-promise/node_modules/request/node_modules/stringstream/example.js",
+        "node_modules/request-promise/node_modules/request/node_modules/stringstream/stringstream.js",
+        "node_modules/request-promise/node_modules/request/node_modules/tough-cookie/generate-pubsuffix.js",
+        "node_modules/request-promise/node_modules/request/node_modules/tough-cookie/lib/cookie.js",
+        "node_modules/request-promise/node_modules/request/node_modules/tough-cookie/lib/memstore.js",
+        "node_modules/request-promise/node_modules/request/node_modules/tough-cookie/lib/pubsuffix.js",
+        "node_modules/request-promise/node_modules/request/node_modules/tough-cookie/lib/store.js",
+        "node_modules/request-promise/node_modules/request/node_modules/tough-cookie/node_modules/punycode/punycode.js",
+        "node_modules/request-promise/node_modules/request/node_modules/tough-cookie/test.js",
+        "node_modules/request-promise/node_modules/request/node_modules/tunnel-agent/index.js",
+        "node_modules/request-promise/node_modules/request/request.js",
+        "node_modules/underscore/underscore-min.js",
+        "node_modules/underscore/underscore.js",
+        "node_modules/vue/dist/vue.js",
+        "node_modules/vue/dist/vue.min.js",
+        "node_modules/vue/src/batcher.js",
+        "node_modules/vue/src/binding.js",
+        "node_modules/vue/src/compiler.js",
+        "node_modules/vue/src/config.js",
+        "node_modules/vue/src/deps-parser.js",
+        "node_modules/vue/src/directive.js",
+        "node_modules/vue/src/directives/html.js",
+        "node_modules/vue/src/directives/if.js",
+        "node_modules/vue/src/directives/index.js",
+        "node_modules/vue/src/directives/model.js",
+        "node_modules/vue/src/directives/on.js",
+        "node_modules/vue/src/directives/partial.js",
+        "node_modules/vue/src/directives/repeat.js",
+        "node_modules/vue/src/directives/style.js",
+        "node_modules/vue/src/directives/view.js",
+        "node_modules/vue/src/directives/with.js",
+        "node_modules/vue/src/emitter.js",
+        "node_modules/vue/src/exp-parser.js",
+        "node_modules/vue/src/filters.js",
+        "node_modules/vue/src/fragment.js",
+        "node_modules/vue/src/main.js",
+        "node_modules/vue/src/observer.js",
+        "node_modules/vue/src/template-parser.js",
+        "node_modules/vue/src/text-parser.js",
+        "node_modules/vue/src/transition.js",
+        "node_modules/vue/src/utils.js",
+        "node_modules/vue/src/viewmodel.js"
+      ],
+      ".json": [
+        "node_modules/ansi-to-html/package.json",
+        "node_modules/autocomplete-plus-async-plus/node_modules/fuzzaldrin/package.json",
+        "node_modules/autocomplete-plus-async-plus/node_modules/minimatch/node_modules/lru-cache/package.json",
+        "node_modules/autocomplete-plus-async-plus/node_modules/minimatch/node_modules/sigmund/package.json",
+        "node_modules/autocomplete-plus-async-plus/node_modules/minimatch/package.json",
+        "node_modules/autocomplete-plus-async-plus/node_modules/temp/node_modules/rimraf/package.json",
+        "node_modules/autocomplete-plus-async-plus/node_modules/temp/package.json",
+        "node_modules/autocomplete-plus-async-plus/node_modules/underscore-plus/node_modules/underscore/package.json",
+        "node_modules/autocomplete-plus-async-plus/node_modules/underscore-plus/package.json",
+        "node_modules/autocomplete-plus-async-plus/package.json",
+        "node_modules/bluebird/package.json",
+        "node_modules/event-kit/api.json",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/harmony-collections/package.json",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/mixto/package.json",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/property-accessors/node_modules/harmony-collections/package.json",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/property-accessors/package.json",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/package.json",
+        "node_modules/event-kit/node_modules/grim/node_modules/underscore-plus/node_modules/underscore/package.json",
+        "node_modules/event-kit/node_modules/grim/node_modules/underscore-plus/package.json",
+        "node_modules/event-kit/node_modules/grim/package.json",
+        "node_modules/event-kit/package.json",
+        "node_modules/fs-plus/node_modules/async/component.json",
+        "node_modules/fs-plus/node_modules/async/package.json",
+        "node_modules/fs-plus/node_modules/mkdirp/package.json",
+        "node_modules/fs-plus/node_modules/rimraf/package.json",
+        "node_modules/fs-plus/node_modules/underscore-plus/node_modules/underscore/package.json",
+        "node_modules/fs-plus/node_modules/underscore-plus/package.json",
+        "node_modules/fs-plus/package.json",
+        "node_modules/jquery/bower.json",
+        "node_modules/jquery/package.json",
+        "node_modules/omnisharp-server-binaries/OmniSharpServer/OmniSharp/config-cygwin.json",
+        "node_modules/omnisharp-server-binaries/OmniSharpServer/OmniSharp/config-emacs-on-windows.json",
+        "node_modules/omnisharp-server-binaries/OmniSharpServer/OmniSharp/config.json",
+        "node_modules/omnisharp-server-binaries/lib/server/config.json",
+        "node_modules/omnisharp-server-binaries/package.json",
+        "node_modules/request-promise/node_modules/bluebird/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/aws-sign2/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/component.json",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/string_decoder/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/bl/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/caseless/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/combined-stream/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/forever-agent/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/form-data/node_modules/async/component.json",
+        "node_modules/request-promise/node_modules/request/node_modules/form-data/node_modules/async/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/form-data/node_modules/mime/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/form-data/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/boom/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/hoek/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/sntp/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/hawk/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/asn1/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/assert-plus/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/float.json",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/int.json",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/psinfo.json",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/struct.json",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/typedef.json",
+        "node_modules/request-promise/node_modules/request/node_modules/http-signature/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/json-stringify-safe/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/mime-types/component.json",
+        "node_modules/request-promise/node_modules/request/node_modules/mime-types/lib/custom.json",
+        "node_modules/request-promise/node_modules/request/node_modules/mime-types/lib/mime.json",
+        "node_modules/request-promise/node_modules/request/node_modules/mime-types/lib/node.json",
+        "node_modules/request-promise/node_modules/request/node_modules/mime-types/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/node-uuid/component.json",
+        "node_modules/request-promise/node_modules/request/node_modules/node-uuid/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/oauth-sign/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/qs/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/stringstream/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/tough-cookie/node_modules/punycode/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/tough-cookie/package.json",
+        "node_modules/request-promise/node_modules/request/node_modules/tunnel-agent/package.json",
+        "node_modules/request-promise/node_modules/request/package.json",
+        "node_modules/request-promise/package.json",
+        "node_modules/underscore/package.json",
+        "node_modules/vue/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "",
+          "lib/omni-sharp-server",
+          "lib/omnisharp-atom/features",
+          "lib/omnisharp-atom/features/lib",
+          "lib/omnisharp-atom",
+          "lib/omnisharp-atom/views",
+          "spec"
+        ],
+        "dependencies": {
+          "ansi-to-html": "~0.1.0",
+          "request-promise": "~0.1.2",
+          "bluebird": "~2.3.2",
+          "event-kit": "0.7.2",
+          "fs-plus": "^2.3.1",
+          "vue": "~0.10.6",
+          "underscore": "~1.7.0",
+          "jquery": "^2.1.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/autocomplete-plus-async-plus/lib",
+          "node_modules/autocomplete-plus-async-plus",
+          "node_modules/autocomplete-plus-async-plus/spec",
+          "node_modules/autocomplete-plus-async-plus/spec/fixtures/issues",
+          "node_modules/autocomplete-plus-async-plus/spec/fixtures",
+          "node_modules/autocomplete-plus-async-plus/spec/issues",
+          "node_modules/autocomplete-plus-async-plus/spec/lib"
+        ],
+        "dependencies": {
+          "fuzzaldrin": "~1.0.0",
+          "minimatch": "~0.2.14",
+          "temp": ">=0.7.0",
+          "underscore-plus": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/autocomplete-plus-async-plus/node_modules/minimatch",
+          "node_modules/autocomplete-plus-async-plus/node_modules/minimatch/test"
+        ],
+        "dependencies": {
+          "lru-cache": "2",
+          "sigmund": "~1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/autocomplete-plus-async-plus/node_modules/temp/examples",
+          "node_modules/autocomplete-plus-async-plus/node_modules/temp/lib",
+          "node_modules/autocomplete-plus-async-plus/node_modules/temp",
+          "node_modules/autocomplete-plus-async-plus/node_modules/temp/test"
+        ],
+        "dependencies": {
+          "rimraf": "~2.2.6"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/autocomplete-plus-async-plus/node_modules/underscore-plus/lib",
+          "node_modules/autocomplete-plus-async-plus/node_modules/underscore-plus"
+        ],
+        "dependencies": {
+          "underscore": "~1.6.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/event-kit",
+          "node_modules/event-kit/lib"
+        ],
+        "dependencies": {
+          "grim": "^0.12.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/event-kit/node_modules/grim/lib",
+          "node_modules/event-kit/node_modules/grim"
+        ],
+        "dependencies": {
+          "underscore-plus": "^1.0.0",
+          "emissary": "^1.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/event-kit/node_modules/grim/node_modules/emissary/lib",
+          "node_modules/event-kit/node_modules/grim/node_modules/emissary"
+        ],
+        "dependencies": {
+          "underscore-plus": "1.x",
+          "mixto": "1.x",
+          "property-accessors": "^1.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/property-accessors/lib",
+          "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/property-accessors"
+        ],
+        "dependencies": {
+          "mixto": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/event-kit/node_modules/grim/node_modules/underscore-plus/lib",
+          "node_modules/event-kit/node_modules/grim/node_modules/underscore-plus"
+        ],
+        "dependencies": {
+          "underscore": "~1.6.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/fs-plus/lib",
+          "node_modules/fs-plus"
+        ],
+        "dependencies": {
+          "underscore-plus": "1.x",
+          "mkdirp": "~0.3.5",
+          "rimraf": "~2.2.2",
+          "async": "~0.2.9"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/fs-plus/node_modules/underscore-plus/lib",
+          "node_modules/fs-plus/node_modules/underscore-plus"
+        ],
+        "dependencies": {
+          "underscore": "~1.6.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request-promise/lib",
+          "node_modules/request-promise",
+          "node_modules/request-promise/test"
+        ],
+        "dependencies": {
+          "bluebird": "^1.2",
+          "request": "^2.34"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request-promise/node_modules/request",
+          "node_modules/request-promise/node_modules/request/lib"
+        ],
+        "dependencies": {
+          "bl": "~0.9.0",
+          "caseless": "~0.7.0",
+          "forever-agent": "~0.5.0",
+          "form-data": "~0.1.0",
+          "json-stringify-safe": "~5.0.0",
+          "mime-types": "~1.0.1",
+          "node-uuid": "~1.4.0",
+          "qs": "~2.3.1",
+          "tunnel-agent": "~0.4.0",
+          "tough-cookie": ">=0.12.0",
+          "http-signature": "~0.10.0",
+          "oauth-sign": "~0.5.0",
+          "hawk": "1.1.1",
+          "aws-sign2": "~0.5.0",
+          "stringstream": "~0.0.4",
+          "combined-stream": "~0.0.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request-promise/node_modules/request/node_modules/bl",
+          "node_modules/request-promise/node_modules/request/node_modules/bl/test"
+        ],
+        "dependencies": {
+          "readable-stream": "~1.0.26"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream",
+          "node_modules/request-promise/node_modules/request/node_modules/bl/node_modules/readable-stream/lib"
+        ],
+        "dependencies": {
+          "core-util-is": "~1.0.0",
+          "isarray": "0.0.1",
+          "string_decoder": "~0.10.x",
+          "inherits": "~2.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request-promise/node_modules/request/node_modules/combined-stream/lib",
+          "node_modules/request-promise/node_modules/request/node_modules/combined-stream"
+        ],
+        "dependencies": {
+          "delayed-stream": "0.0.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request-promise/node_modules/request/node_modules/form-data/lib",
+          "node_modules/request-promise/node_modules/request/node_modules/form-data"
+        ],
+        "dependencies": {
+          "combined-stream": "~0.0.4",
+          "mime": "~1.2.11",
+          "async": "~0.9.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/example",
+          "node_modules/request-promise/node_modules/request/node_modules/hawk",
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/lib",
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/test"
+        ],
+        "dependencies": {
+          "hoek": "0.9.x",
+          "boom": "0.4.x",
+          "cryptiles": "0.2.x",
+          "sntp": "0.2.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/boom",
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/boom/lib",
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/boom/test"
+        ],
+        "dependencies": {
+          "hoek": "0.9.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/cryptiles",
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib",
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/cryptiles/test"
+        ],
+        "dependencies": {
+          "boom": "0.4.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/sntp/examples",
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/sntp",
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/sntp/lib",
+          "node_modules/request-promise/node_modules/request/node_modules/hawk/node_modules/sntp/test"
+        ],
+        "dependencies": {
+          "hoek": "0.9.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request-promise/node_modules/request/node_modules/http-signature/lib",
+          "node_modules/request-promise/node_modules/request/node_modules/http-signature"
+        ],
+        "dependencies": {
+          "assert-plus": "0.1.2",
+          "asn1": "0.1.11",
+          "ctype": "0.5.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request-promise/node_modules/request/node_modules/tough-cookie",
+          "node_modules/request-promise/node_modules/request/node_modules/tough-cookie/lib"
+        ],
+        "dependencies": {
+          "punycode": ">=0.2.0"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'atom-sharp':
+        'Enable atom-sharp': 'omnisharp-atom:toggle'
+        'Find Usages': 'omnisharp-atom:find-usages'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'omnisharp-atom'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'omnisharp-atom:toggle' }
+        { 'label': 'Find Usages', 'command': 'omnisharp-atom:find-usages' }
+        { 'label': 'Go to definition', 'command': 'omnisharp-atom:go-to-definition' }
+      ]
+    ]
+  }
+]

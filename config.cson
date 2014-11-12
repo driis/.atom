@@ -1,20 +1,27 @@
-'exception-reporting':
-  'userId': 'aa6f63c8-7204-8abc-0da8-dfac5ec11347'
-'release-notes':
-  'viewedVersion': '0.95.0'
-'runner':
-  'extensions':
-    'csx': 'scriptcs'
-'welcome':
-  'showOnStartup': false
-'metrics':
-  'userId': '2e5edb6201f54e99d6d61e8b91fb3120c04ea558'
-'editor':
-  'fontSize': 13
-  'invisibles': {}
-'core':
-  'ignoredNames': [
-    '.git'
-    '.svn'
-    '.DS_Store'
-  ]
+'global':
+  'exception-reporting':
+    'userId': 'aa6f63c8-7204-8abc-0da8-dfac5ec11347'
+  'release-notes':
+    'viewedVersion': '0.95.0'
+  'runner':
+    'extensions':
+      'csx': 'scriptcs'
+  'welcome':
+    'showOnStartup': false
+  'metrics':
+    'userId': '2e5edb6201f54e99d6d61e8b91fb3120c04ea558'
+  'editor':
+    'fontSize': 13
+    'invisibles': {}
+  'core':
+    'ignoredNames': [
+      '.git'
+      '.svn'
+      '.DS_Store'
+    ]
+'.nant-build.source':
+  'editor': {}
+'.cs.source':
+  'editor': {}
+'.csx.source':
+  'editor': {}

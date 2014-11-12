@@ -1,15 +1,24 @@
 # Atom Runner
 
 This package will run various script files inside of Atom.
-It currently supports JavaScript, CoffeeScript, Ruby, Python, and Go. You
-can add more.
+It currently supports JavaScript, CoffeeScript, Ruby, Python, Go, and Bash
+scripts. You can add more!
 
-![Example](http://github.com/lsegal/atom-runner/raw/master/resources/screenshot-1.png)
+![Example](https://raw.githubusercontent.com/lsegal/atom-runner/master/resources/screenshot-1.png)
 
 ## Using
 
-* Hit Cmd+R to launch the runner for the active window.
-* Hit Ctrl+C to kill a currently running process.
+* Hit Ctrl+R (Alt+R on Win/Linux) to launch the runner for the active window.
+* Hit Ctrl+Shift+C to kill a currently running process.
+* Hit Escape to close the runner window.
+
+## Features
+
+* A docked runner window with ANSI support and ESC keybinding to close.
+* PATH and environment variable detection on OSX.
+* Shebang executable detection in all source files.
+* Configurable commands based on file scope or filename matches.
+* Execute unsaved file buffers!
 
 ## Configuring
 
@@ -23,9 +32,13 @@ This package uses the following default configuration:
     'ruby': 'ruby'
     'python': 'python'
     'go': 'go run'
+    'shell': 'bash'
   'extensions':
-    'spec.coffee': 'jasmine-node --coffee'
+    'spec.coffee': 'mocha'
 ```
+
+**Note**: If a shebang is detected, that line will supersede the
+          default registered command.
 
 You can add more commands for a given language scope, or add commands by
 extension instead (if multiple extensions use the same syntax). Extensions

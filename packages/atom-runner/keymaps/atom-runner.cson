@@ -7,8 +7,20 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'.platform-darwin .workspace .editor':
-  'cmd-r': 'runner:run'
+'.platform-darwin .editor':
+  'ctrl-r': 'run:file'
 
-'.platform-darwin .workspace':
-  'ctrl-c': 'runner:stop'
+'.platform-win32 .editor, .platform-linux .editor':
+  'alt-r': 'run:file'
+
+'.platform-darwin .atom-runner':
+  'cmd-c': 'run:copy'
+
+'.platform-win32 .runner, .platform-linux .atom-runner':
+  'ctrl-c': 'run:copy'
+
+'.workspace':
+  'shift-ctrl-c': 'run:stop'
+
+'.atom-runner':
+  'escape': 'run:close'
