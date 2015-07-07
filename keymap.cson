@@ -16,11 +16,11 @@
 #   'ctrl-P': 'core:move-up'
 #   'ctrl-p': 'core:move-down'
 #
-'.editor':
+'.atom-text-editor':
   'cmd-x': 'my:cut-line'
   'cmd-d': 'editor:duplicate-line'
   'cmd-ctrl-t': 'my:stacktrace-transform'
 
-'.platform-win32 .editor, .platform-linux .editor':
+'.platform-win32 .atom-text-editor, .platform-linux .atom-text-editor':
   'ctrl-d': 'editor:duplicate-lines'
   'ctrl-x': 'my:cut-line'

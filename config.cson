@@ -20,3 +20,4 @@
       ".svn"
       ".DS_Store"
     ]
+  linter: {}

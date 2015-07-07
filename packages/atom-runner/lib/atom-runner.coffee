@@ -14,6 +14,8 @@ class AtomRunner
 
   defaultExtensionMap:
     'spec.coffee': 'mocha'
+    'ps1': 'c:\\windows\\sysnative\\windowspowershell\\v1.0\\powershell.exe -file'
+    '_test.go': 'go test'
 
   defaultScopeMap:
     coffee: 'coffee'
@@ -22,6 +24,7 @@ class AtomRunner
     python: 'python'
     go: 'go run'
     shell: 'bash'
+    powershell: 'c:\\windows\\sysnative\\windowspowershell\\v1.0\\powershell.exe -noninteractive -noprofile -c -'
 
   extensionMap: null
   scopeMap: null
@@ -55,17 +58,19 @@ class AtomRunner
       @extensionMap = atom.config.get(@cfg.ext)
     atom.config.observe @cfg.scope, =>
       @scopeMap = atom.config.get(@cfg.scope)
-    atom.workspaceView.command 'run:file', => @run(false)
-    atom.workspaceView.command 'run:selection', => @run(true)
-    atom.workspaceView.command 'run:stop', => @stop()
-    atom.workspaceView.command 'run:close', => @stopAndClose()
+    atom.commands.add 'atom-workspace', 'run:file', => @run(false)
+    atom.commands.add 'atom-workspace', 'run:selection', => @run(true)
+    atom.commands.add 'atom-workspace', 'run:stop', => @stop()
+    atom.commands.add 'atom-workspace', 'run:close', => @stopAndClose()
+    atom.commands.add '.atom-runner', 'run:copy', =>
+      atom.clipboard.write(window.getSelection().toString())
 
   run: (selection) ->
-    editor = atom.workspace.getActiveEditor()
+    editor = atom.workspace.getActiveTextEditor()
     return unless editor?
 
     path = editor.getPath()
-    cmd = @commandFor(editor)
+    cmd = @commandFor(editor, selection)
     unless cmd?
       console.warn("No registered executable for file '#{path}'")
       return
@@ -73,7 +78,7 @@ class AtomRunner
     {pane, view} = @runnerView()
     if not view?
       view = new AtomRunnerView(editor.getTitle())
-      panes = atom.workspaceView.getPaneViews()
+      panes = atom.workspace.getPanes()
       pane = panes[panes.length - 1].splitRight(view)
 
     view.setTitle(editor.getTitle())
@@ -140,29 +145,32 @@ class AtomRunner
     @child.stdin.end()
     view.footer('Running: ' + cmd + ' ' + editor.getPath())
 
-  commandFor: (editor) ->
+  commandFor: (editor, selection) ->
     # try to find a shebang
     shebang = @commandForShebang(editor)
     return shebang if shebang?
 
-    # try to lookup by extension
-    if editor.getPath()?
-      for ext in Object.keys(@extensionMap).sort((a,b) -> b.length - a.length)
-        if editor.getPath().match('\\.' + ext + '$')
-          return @extensionMap[ext]
+    # Don't lookup by extension from selection.
+    if (!selection)
+      # try to lookup by extension
+      if editor.getPath()?
+        for ext in Object.keys(@extensionMap).sort((a,b) -> b.length - a.length)
+          boundary = if ext.match(/^\b/) then '' else '\\b'
+          if editor.getPath().match(boundary + ext + '$')
+            return @extensionMap[ext]
 
     # lookup by grammar
-    scope = editor.getCursorScopes()[0]
+    scope = editor.getLastCursor().getScopeDescriptor().scopes[0]
     for name in Object.keys(@scopeMap)
       if scope.match('^source\\.' + name + '\\b')
         return @scopeMap[name]
 
   commandForShebang: (editor) ->
-    match = editor.lineForBufferRow(0).match(/^#!\s*(.+)/)
+    match = editor.lineTextForBufferRow(0).match(/^#!\s*(.+)/)
     match and match[1]
 
   runnerView: ->
-    for pane in atom.workspaceView.getPaneViews()
+    for pane in atom.workspace.getPanes()
       for view in pane.getItems()
         return {pane: pane, view: view} if view instanceof AtomRunnerView
     {pane: null, view: null}
